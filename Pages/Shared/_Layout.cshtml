@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - web_portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        .nav-bar {
+            list-style-type: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        ul {
+            padding: 0;
+        }
+        ul li {
+            display: block;
+            float:left;
+            margin: 20px;
+            font-size: 1.4rem;
+        }
+
+        ul a {
+            color: white;
+            
+        }
+
+        ul a:hover {
+            color: aqua;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: aqua;
+            text-decoration: none;
+        }
+        body {
+            background-color: #1B1B1B;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        @*<nav class="navbar navbar-dark bg-dark navbar-expand-sm  navbar-toggleable-sm border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Renz Lontac</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1 flex" style="color:white">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index" style="color:white">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>*@
+
+        <div class="nav-bar">
+            <ul>
+                <li>
+                    <a href='#'>About me</a>
+                </li>
+                <li>
+                    <a href='#'>Contact</a>
+                </li>
+                <li>
+                    <a href='#'>My Projects</a>
+                </li>
+            </ul>
+        </div>
+
+        
+    </header>
+    <div class="container">
+        <main role="main" class="p-1">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Renz Lontac - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
