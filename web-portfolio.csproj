@@ -3,10 +3,25 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>web_portfolio</RootNamespace>
+    <UserSecretsId>b8d24d96-afb5-487f-90e9-e72f971e892d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Component.razor" />
+    <Content Remove="Pages\Index1.cshtml" />
+    <Content Remove="Pages\sample.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\lib\1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\Images-Videos\" />
   </ItemGroup>
 
 </Project>

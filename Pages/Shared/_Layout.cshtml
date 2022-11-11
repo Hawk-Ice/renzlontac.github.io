@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - web_portfolio</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="icon" type="image/png" href="~/renzpaolo.ico" sizes="32x32">
     <style>
         .nav-bar {
             list-style-type: none;
@@ -13,33 +14,39 @@
             align-items: flex-start;
             justify-content: center;
         }
+
         ul {
             padding: 0;
         }
-        ul li {
-            display: block;
-            float:left;
-            margin: 20px;
-            font-size: 1.4rem;
-        }
 
-        ul a {
-            color: white;
-            
-        }
+            ul li {
+                display: block;
+                float: left;
+                margin: 20px;
+                font-size: 1.4rem;
+            }
 
-        ul a:hover {
-            color: aqua;
-            text-decoration: none;
-        }
+            ul a {
+                color: white;
+            }
+
+                ul a:hover {
+                    color: aqua;
+                    text-decoration: none;
+                }
 
         a:hover {
             color: aqua;
             text-decoration: none;
         }
+
+        github {
+            color: aqua;
+        }
+
         body {
             background-color: #1B1B1B;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Verdana, sans-serif;
         }
     </style>
 </head>
@@ -68,13 +75,10 @@
         <div class="nav-bar">
             <ul>
                 <li>
-                    <a href='#'>About me</a>
+                    <a asp-page="/Index">About me</a>
                 </li>
                 <li>
-                    <a href='#'>Contact</a>
-                </li>
-                <li>
-                    <a href='#'>My Projects</a>
+                    <a asp-page="/MyProjects">My Projects</a>
                 </li>
             </ul>
         </div>
@@ -87,11 +91,11 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @*<footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - Renz Lontac - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer>*@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
